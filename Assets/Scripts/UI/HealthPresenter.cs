@@ -20,8 +20,6 @@ namespace Game.UI
 
         private void OnHealthChanghed()
         {
-            Debug.Log("Устанавливаем значения здоровья во вью");
-            
             foreach (var healthView in _healthView)
             {
                 healthView.SetCurrentHealth(_healthModel.Health);

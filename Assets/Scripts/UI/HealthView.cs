@@ -2,7 +2,6 @@
 {
     public class HealthView : HealthViewBase
     {
-
         private int _health;
         private int _maxHealth;
 
@@ -16,10 +15,5 @@
         {
             _health = health;
         }
-        
-        // private void OnButtonClick()
-        // {
-        //     _text.text = $"{healthModel.Health} / {healthModel.MaxHealth}";
-        // }
     }
 }

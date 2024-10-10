@@ -8,7 +8,7 @@ namespace World.Environment
     {
         [SerializeField] private HealthController _healthController;
         [SerializeField] private Button _button;
-        [SerializeField] private int _heal = 10;
+        [SerializeField] private int _heal;
 
         public void OnEnable()
         {
