@@ -9,28 +9,28 @@ namespace Game.UI
 
         private void OnEnable()
         {
-            _healthModel.Changed += OnChanghed;
+            _healthModel.Changed += OnChanged;
         }
 
         private void OnDisable()
         {
-            _healthModel.Changed -= OnChanghed;
+            _healthModel.Changed -= OnChanged;
         }
 
-
-        private void OnChanghed()
-        {
-            foreach (var healthView in _healthView)
-            {
-                healthView.SetCurrentHealth(_healthModel.Value);
-            }
-        }
 
         public void Init()
         {
             foreach (var healthView in _healthView)
             {
                 healthView.SetHealthInfo(_healthModel.MaxValue, _healthModel.Value);
+            }
+        }
+
+        private void OnChanged()
+        {
+            foreach (var healthView in _healthView)
+            {
+                healthView.SetCurrentHealth(_healthModel.Value);
             }
         }
     }

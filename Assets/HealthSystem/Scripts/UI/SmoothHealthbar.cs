@@ -9,7 +9,6 @@ public class SmoothHealthbar : HealthViewBase
     [SerializeField] private float _delay;
     [SerializeField] private float _changesSpeed;
     
-
     private int _maxHealth;
     private Coroutine _coroutine;
 

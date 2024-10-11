@@ -1,6 +1,5 @@
 ﻿using Game.UI;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI
