@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94dfdec35b71d2b4b98ee6014c8ace32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 200
+  _maxValue: 200
 --- !u!4 &1603070784
 Transform:
   m_ObjectHideFlags: 0
@@ -889,6 +889,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.731102
       objectReference: {fileID: 0}
+    - target: {fileID: 1453122489782230596, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
+      propertyPath: _delay
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453122489782230596, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
+      propertyPath: _changesSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2405229910245053807, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
       propertyPath: m_text
       value: ATTACK
@@ -964,6 +972,10 @@ PrefabInstance:
     - target: {fileID: 2993490306449517920, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723143969966484416, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
+      propertyPath: _heal
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3723143969966484416, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
       propertyPath: _healthController
@@ -1153,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 6414833608723894196, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
+      propertyPath: _delay
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 6436053083500690529, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1160,6 +1176,10 @@ PrefabInstance:
     - target: {fileID: 6436053083500690529, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156204071256118252, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
+      propertyPath: _damage
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7156204071256118252, guid: 2bc5cd983b6b3e04e9588adb95d3e702, type: 3}
       propertyPath: _healthController

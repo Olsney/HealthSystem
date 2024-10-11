@@ -6,7 +6,7 @@ public class ButtonDamage : MonoBehaviour
 {
     [SerializeField] private HealthController _healthController;
     [SerializeField] private Button _button;
-    [SerializeField] private int _damage = 10;
+    [SerializeField] private int _damage;
 
     private void OnEnable()
     {

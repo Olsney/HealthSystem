@@ -1,20 +1,19 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.Serialization;
 
 public class HealthModel : MonoBehaviour
 {
-    public event Action HealthChanged;
+    [SerializeField] private int _maxValue;
     
-    public int Health { get; private set; }
-
-    [SerializeField] private int _maxHealth;
+    public event Action Changed;
     
-    public int MaxHealth => _maxHealth;
+    public int Value { get; private set; }
+    public int MaxValue => _maxValue;
     
     public void Init()
     {
-        Health = _maxHealth;
+        Value = _maxValue;
     }
     
     public void TakeDamage(int damage)
@@ -22,15 +21,15 @@ public class HealthModel : MonoBehaviour
         if (damage < 0)
             damage = 0;
         
-        Health -= damage;
+        Value -= damage;
 
-        if (Health < 0)
-            Health = 0;
+        if (Value < 0)
+            Value = 0;
         
         Debug.Log("Получен урон!");
-        Debug.Log($"Здоровье: {Health}");
+        Debug.Log($"Здоровье: {Value}");
         
-        HealthChanged?.Invoke();
+        Changed?.Invoke();
     }
 
     public void TakeHeal(int heal)
@@ -38,15 +37,15 @@ public class HealthModel : MonoBehaviour
         if (heal < 0)
             throw new Exception("Лечение не может быть отрицательным");
 
-        Health += heal;
+        Value += heal;
 
         ClampHealth();
-        HealthChanged?.Invoke();
+        Changed?.Invoke();
     }
 
     private void ClampHealth()
     {
-        if (Health > _maxHealth)
-            Health = _maxHealth;
+        if (Value > _maxValue)
+            Value = _maxValue;
     }
 }

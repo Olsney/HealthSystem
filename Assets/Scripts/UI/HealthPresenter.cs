@@ -9,20 +9,20 @@ namespace Game.UI
 
         private void OnEnable()
         {
-            _healthModel.HealthChanged += OnHealthChanghed;
+            _healthModel.Changed += OnChanghed;
         }
 
         private void OnDisable()
         {
-            _healthModel.HealthChanged -= OnHealthChanghed;
+            _healthModel.Changed -= OnChanghed;
         }
 
 
-        private void OnHealthChanghed()
+        private void OnChanghed()
         {
             foreach (var healthView in _healthView)
             {
-                healthView.SetCurrentHealth(_healthModel.Health);
+                healthView.SetCurrentHealth(_healthModel.Value);
             }
         }
 
@@ -30,7 +30,7 @@ namespace Game.UI
         {
             foreach (var healthView in _healthView)
             {
-                healthView.SetHealthInfo(_healthModel.MaxHealth, _healthModel.Health);
+                healthView.SetHealthInfo(_healthModel.MaxValue, _healthModel.Value);
             }
         }
     }
